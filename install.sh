@@ -1,12 +1,15 @@
 #!/usr/bin/env zsh
 
-pushd ~/dotfiles
+DOTFILES=$HOME/dotfiles
+STOW_FOLDERS="i3,xresources"
 
-echo "stow i3"
-stow -D i3
-stow i3
-echo "stow xresources"
-stow -D xresources
-stow xresources
+pushd $DOTFILES
+
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    echo "stow $folder"
+    stow -D $folder
+    stow $folder
+done
 
 popd
