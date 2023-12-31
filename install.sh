@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 DOTFILES=$HOME/personal/dotfiles
-STOW_FOLDERS="bin,i3,tmux,xresources"
+STOW_FOLDERS="bin,i3,nvim,tmux,xresources"
 
 pushd $DOTFILES
 
