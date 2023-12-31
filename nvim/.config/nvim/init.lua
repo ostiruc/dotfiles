@@ -233,11 +233,36 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- Was off previously, I want to try it on
+vim.opt.wrap = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
+-- Highlight what the search matches
+vim.o.incsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
+
+-- Make line numbers relative (for easier jumping)
+vim.opt.relativenumber = true
+
+-- Was on previously, I want to try this off in case it conflicts with these plugins
+vim.opt.termguicolors = false
+
+vim.opt.sidescrolloff = 8
+vim.opt.signcolumn = "yes"
+-- I don't think I need this
+-- vim.opt.isfname:append("@-@")
+
+vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
